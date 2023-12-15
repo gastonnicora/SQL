@@ -50,6 +50,10 @@ jobs:
           gastonnicora/sql:${{ env.SOURCE_NAME }}
       env:
         SOURCE_NAME: ${{ steps.prepare_source.outputs.SOURCE_NAME }}
+        MYSQL_DATABASE: ${{secrets.MYSQL_DATABASE}}
+        MYSQL_PASSWORD: ${{secrets.MYSQL_PASSWORD}}
+        MYSQL_ROOT_PASSWORD: ${{secrets.MYSQL_ROOT_PASSWORD}}
+        MYSQL_USER: ${{secrets.MYSQL_USER}}
     
 
     # Step 7: Muestra el digest de la imagen
